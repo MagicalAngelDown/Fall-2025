@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Simple Order Form</h1>
+    <p class="subtitle">Use this form to place an order. Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+    <form id="order-form" action="#" method="post" novalidate>
+      <!-- Customer Info -->
+      <fieldset>
+        <legend>Customer Information</legend>
+
+        <div class="form-row">
+          <label for="first_name">First Name<span aria-hidden="true">*</span></label>
+          <input type="text" id="first_name" name="first_name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="last_name">Last Name<span aria-hidden="true">*</span></label>
+          <input type="text" id="last_name" name="last_name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email Address<span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone"  />
+        </div>
+
+        <div class="form-row form-row--full">
+          <label for="shipping_address">Shipping Address</label>
+          <textarea id="shipping_address" name="shipping_address" rows="3" ></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Order Details -->
+      <fieldset>
+        <legend>Order Details</legend>
+
+        <div class="form-row">
+          <label for="product">Product Selection<span aria-hidden="true">*</span></label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a product…</option>
+            <option value="widget-basic">Widget — Basic ($9.99)</option>
+            <option value="widget-plus">Widget — Plus ($19.99)</option>
+            <option value="widget-pro">Widget — Pro ($29.99)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="quantity">Quantity<span aria-hidden="true">*</span></label>
+          <input type="number" id="quantity" name="quantity" min="1" step="1" value="1" required />
+        </div>
+
+        <div class="form-row form-row--full">
+          <span class="label">Payment Method<span aria-hidden="true">*</span></span>
+          <div class="inline-options" role="radiogroup" aria-labelledby="payment-label">
+            <label class="radio">
+              <input type="radio" name="payment_type" value="visa" required /> Visa
+            </label>
+            <label class="radio">
+              <input type="radio" name="payment_type" value="mastercard" /> Mastercard
+            </label>
+            <label class="radio">
+              <input type="radio" name="payment_type" value="amex" /> American Express
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="card_number">Card Number</label>
+          <input type="number" id="card_number" name="card_number" placeholder="1234 5678 9012 3456" />
+        </div>
+
+        <div class="form-row">
+          <label for="order_date">Order Date</label>
+          <select id="order_date" name="order_date">
+            <option value="" disabled selected>Select a date…</option>
+            <option>August 24, 2025</option>
+            <option>August 25, 2025</option>
+            <option>August 26, 2025</option>
+            <option>August 27, 2025</option>
+            <option>August 28, 2025</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="order_button" type="submit" class="btn btn--primary">Submit Order</button>
+        <button type="reset" class="btn btn--ghost">Reset</button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>
