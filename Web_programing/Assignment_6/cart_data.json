@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Wireless Mouse",
+    "price": 19.99,
+    "quantity": 2
+  },
+  {
+    "name": "Mechanical Keyboard",
+    "price": 79.95,
+    "quantity": 1
+  },
+  {
+    "name": "USB-C Cable (1m)",
+    "price": 7.5,
+    "quantity": 3
+  },
+  {
+    "name": "27\" Monitor",
+    "price": 229.0,
+    "quantity": 1
+  }
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 6 — Fetch API & JSON: Shopping Cart</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; background: #f6f7fb; color: #222; }
+    header { background: #4f46e5; color: #fff; padding: 1rem 1.25rem; }
+    header h1 { margin: 0; font-size: 1.2rem; }
+    main { max-width: 980px; margin: 1.25rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+    .card h2 { margin: 0; padding: 1rem 1.25rem; border-bottom: 1px solid #eee; font-size: 1.05rem; }
+    .card .content { padding: 1rem 1.25rem; }
+    .muted { color: #666; }
+    .cart-item { display: grid; grid-template-columns: 1.6fr .8fr .8fr .9fr; gap: .75rem; padding: .6rem 0; border-bottom: 1px dashed #ececec; align-items: center; }
+    .cart-item:last-child { border-bottom: 0; }
+    .cart-head { font-weight: 600; color: #555; border-bottom: 2px solid #e9e9e9; padding-bottom: .4rem; margin-bottom: .6rem; }
+    .right { text-align: right; }
+    .total { font-weight: 700; }
+    .error { padding: .85rem 1rem; border-radius: 10px; background: #fee2e2; color: #991b1b; display: none; margin: 0 0 1rem 0; }
+    .hidden { display: none; }
+    .loading { font-style: italic; color: #666; }
+    footer { padding: 1.25rem; text-align: center; color: #7a7a7a; }
+    code.inline { background: #f0f4ff; padding: .12rem .35rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shopping Cart — Fetch API + JSON</h1>
+  </header>
+
+  <main>
+    <div id="cart-error" class="error" role="alert"></div>
+
+    <div class="grid">
+      <!-- Shopping Cart List -->
+      <section class="card" aria-labelledby="cart-title">
+        <h2 id="cart-title">Shopping Cart List</h2>
+        <div class="content">
+          <p id="loading" class="loading">Loading cart data…</p>
+
+          <div id="cart-list" class="hidden">
+            <div class="cart-item cart-head" aria-hidden="true">
+              <div>Item</div>
+              <div class="right">Price</div>
+              <div class="right">Qty</div>
+              <div class="right">Total</div>
+            </div>
+            <div id="cart-rows"></div>
+          </div>
+
+          <p id="empty" class="muted hidden">Your cart is empty.</p>
+        </div>
+      </section>
+
+      <!-- Cart Summary -->
+      <aside class="card" aria-labelledby="summary-title">
+        <h2 id="summary-title">Cart Summary</h2>
+        <div class="content">
+          <div style="display:flex; justify-content:space-between; margin: .4rem 0;">
+            <span>Items</span>
+            <strong id="summary-items">0</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin: .4rem 0;">
+            <span>Subtotal</span>
+            <strong id="summary-subtotal">$0.00</strong>
+          </div>
+          <hr style="border:none; border-top:1px solid #eee; margin: .75rem 0;">
+          <div style="display:flex; justify-content:space-between; font-size:1.1rem;">
+            <span class="total">Total</span>
+            <span id="summary-total" class="total">$0.00</span>
+          </div>
+          <p class="muted" style="margin-top:.75rem;">Data is loaded from <code class="inline">cart_data.json</code> using the Fetch API.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>ITEC 3280 – Web Programming • Assignment 6</footer>
+
+  <script src="fetch_cart.js" defer></script>
+</body>
+</html>
