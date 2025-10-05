@@ -18,5 +18,35 @@
     "name": "27\" Monitor",
     "price": 229.0,
     "quantity": 1
+  },
+  {
+    "name": "Myriad Hoodie",
+    "price" : 39.99,
+    "quantity": 1
+  },
+  {
+    "name": "Aurora Hoodie",
+    "price": 39.99,
+    "quantity": 1
+  },
+  {
+    "name": "Infinity Mug",
+    "price": 12.5,
+    "quantity": 1
+  },
+  {
+    "name": "Pixel Socks",
+    "price": 15.99,
+    "quantity": 6
+  },
+  {
+    "name": "Nebula Tee",
+    "price": 19.99,
+    "quantity": 1
+  },
+  {
+    "name": "Glow Sticker Pack",
+    "price": 6.99,
+    "quantity": 6
   }
 ]
