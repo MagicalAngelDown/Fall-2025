@@ -18,6 +18,7 @@ function fmt_price($n) {
     return '$' . number_format((float)$n, 2);
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -45,7 +46,6 @@ function fmt_price($n) {
           $name = htmlspecialchars($p['name'] ?? 'Unnamed');
           $price = isset($p['price']) ? fmt_price($p['price']) : 'N/A';
           $desc = htmlspecialchars($p['description'] ?? '');
-          // Link uses array index as the id parameter "i"
           $href = 'product_detail.php?i=' . urlencode((string)$i);
         ?>
           <article class="card">
