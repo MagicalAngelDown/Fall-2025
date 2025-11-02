@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midterm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Midterm</h1>
+    <p class="subtitle">ITEC 3280 – Web Programming</p>
+  </header>
+
+  <main class="container grid">
+    <section aria-labelledby="form-title" class="card">
+      <h2 id="form-title">User Information</h2>
+      <form id="userForm" novalidate>
+        <fieldset>
+          <legend>Identity</legend>
+          <div class="field">
+            <label for="first_name">First Name <span aria-hidden="true" class="req">*</span></label>
+            <input id="first_name" name="first_name" type="text" required autocomplete="given-name" />
+            <small class="error" id="first_name_error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="last_name">Last Name <span aria-hidden="true" class="req">*</span></label>
+            <input id="last_name" name="last_name" type="text" required autocomplete="family-name" />
+            <small class="error" id="last_name_error" aria-live="polite"></small>
+          </div>
+
+          <div class="field checkbox">
+            <input id="is_dr" name="is_dr" type="checkbox" />
+            <label for="is_dr">Prepend “Dr.”</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact</legend>
+          <div class="field">
+            <label for="email_address">Email Address <span aria-hidden="true" class="req">*</span></label>
+            <input id="email_address" name="email_address" type="email" inputmode="email" required placeholder="name@example.com" />
+            <small class="error" id="email_error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone_number">Phone Number (optional)</label>
+            <input id="phone_number" name="phone_number" type="tel" inputmode="tel"
+                   placeholder="(555) 555-5555"
+                   aria-describedby="phone_help" />
+            <small id="phone_help" class="help">Digits only or formats like 555-555-5555 or (555) 555-5555; 10–15 digits.</small>
+            <small class="error" id="phone_error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="website">Website (optional)</label>
+            <input id="website" name="website" type="url" inputmode="url" placeholder="https://example.com" />
+            <small class="error" id="website_error" aria-live="polite"></small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Organization</legend>
+          <div class="field">
+            <label for="department">Department <span aria-hidden="true" class="req">*</span></label>
+            <select id="department" name="department" required>
+              <option value="" selected disabled>-- Select Department --</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Other">Other</option>
+            </select>
+            <small class="error" id="department_error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="title">Title <span aria-hidden="true" class="req">*</span></label>
+            <select id="title" name="title" required>
+              <option value="" selected disabled>-- Select Title --</option>
+              <option value="Professor">Professor</option>
+              <option value="Associate Professor">Associate Professor</option>
+              <option value="Assistant Professor">Assistant Professor</option>
+              <option value="Lecturer">Lecturer</option>
+              <option value="Graduate Assistant">Graduate Assistant</option>
+              <option value="Staff">Staff</option>
+              <option value="Student">Student</option>
+            </select>
+            <small class="error" id="title_error" aria-live="polite"></small>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section aria-labelledby="display-title" class="card">
+      <h2 id="display-title">Submitted Details</h2>
+      <div id="result" class="result" aria-live="polite">
+        <p>No submission yet. Fill the form and press Submit.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
