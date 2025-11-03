@@ -37,6 +37,7 @@ $name = $product ? htmlspecialchars($product['name'] ?? 'Unnamed') : 'Error';
 $price = $product && isset($product['price']) ? fmt_price($product['price']) : 'N/A';
 $desc = $product ? htmlspecialchars($product['description'] ?? '') : '';
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>

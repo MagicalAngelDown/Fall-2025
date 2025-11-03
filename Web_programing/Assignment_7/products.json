@@ -2,51 +2,61 @@
   {
     "name": "Wireless Mouse",
     "price": 19.99,
+    "desc": "Ergonomic wireless mouse with adjustable DPI.",
     "quantity": 2
   },
   {
     "name": "Mechanical Keyboard",
     "price": 79.95,
+    "desc": "Durable mechanical keyboard with RGB lighting and tactile switches.",
     "quantity": 1
   },
   {
     "name": "USB-C Cable (1m)",
     "price": 7.5,
+    "desc": "Fast-charging USB-C cable designed for reliability and everyday use.",
     "quantity": 3
   },
   {
     "name": "27\" Monitor",
     "price": 229.0,
+    "desc": "27-inch full-HD display with vibrant colors, ideal for gaming and productivity.",
     "quantity": 1
   },
   {
     "name": "Myriad Hoodie",
-    "price" : 39.99,
+    "price": 39.99,
+    "desc": "Premium soft hoodie featuring the Myriad Gaming crest—rep your community in style.",
     "quantity": 1
   },
   {
     "name": "Aurora Hoodie",
     "price": 39.99,
+    "desc": "Cozy hoodie inspired by the Aurora theme—bright accents and a clean aesthetic.",
     "quantity": 1
   },
   {
     "name": "Infinity Mug",
     "price": 12.5,
+    "desc": "Ceramic mug with the signature infinity symbol—perfect for late-night coding and gaming.",
     "quantity": 1
   },
   {
     "name": "Pixel Socks",
     "price": 15.99,
+    "desc": "Comfort-fit socks featuring playful pixel-art patterns—level up your wardrobe.",
     "quantity": 6
   },
   {
     "name": "Nebula Tee",
     "price": 19.99,
+    "desc": "Graphic tee inspired by cosmic nebula colors—lightweight and breathable.",
     "quantity": 1
   },
   {
     "name": "Glow Sticker Pack",
     "price": 6.99,
+    "desc": "Pack of glow-in-the-dark stickers featuring icons from your favorite gaming worlds.",
     "quantity": 6
   }
 ]
