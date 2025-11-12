@@ -1,17 +1,17 @@
 <?php
 
-declare(strict_types=1);
-require_once __DIR__ . '/db.php';
+  declare(strict_types=1);
+  require_once __DIR__ . '/db.php';
 
-$pdo = get_pdo();
+  $pdo = get_pdo();
 
-// Fetch products
-$stmt = $pdo->query('SELECT id, name, price, description FROM products ORDER BY id ASC');
-$products = $stmt->fetchAll();
+  // Fetch products
+  $stmt = $pdo->query('SELECT id, name, price, description FROM products ORDER BY id ASC');
+  $products = $stmt->fetchAll();
 
-function e(string $value): string {
-    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-}
+  function e(string $value): string {
+      return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+  }
 ?>
 
 <!doctype html>
