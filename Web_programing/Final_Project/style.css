@@ -1,0 +1,125 @@
+/* css/style.css */
+
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Optimized layout width for modern desktops */
+.wrapper {
+    max-width: 1200px;      /* Reasonable width for current browsers */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0077cc;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+}
+
+/* Generic form styles */
+form {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.form-row {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-row label {
+    width: 140px;
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 5px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #0077cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005a99;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.success {
+    color: green;
+    font-size: 0.95rem;
+}
+
+/* Simple table styling for dashboard lists */
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #eee;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    text-align: center;
+}
